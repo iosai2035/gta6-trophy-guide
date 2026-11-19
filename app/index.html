@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI: all 55 trophies, roadmap &amp; tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: every guide with sources, the platinum roadmap, the 100% checklist, and saved progress.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="subtitle">All 55 trophies — every guide, the road to the platinum, and a tracker that remembers your progress. Works fully offline.</p>
+  </div>
+  <div class="progress" id="progressBox" aria-label="Overall trophy progress">
+    <div class="progress-line">
+      <strong id="progressText">0 of 55 earned</strong>
+      <span id="progressPct">0%</span>
+    </div>
+    <div class="bar"><div class="bar-fill" id="progressBar" style="width:0%"></div></div>
+    <p class="grade-counts" id="gradeCounts"></p>
+  </div>
+</header>
+
+<div class="missable-banner" id="missableBanner" role="note">
+  <strong>⚠ One trophy can be missed.</strong>
+  <span><b>Positive Mental Attitude</b> — meditate at Jason's house in Chapter 1, after the mission “Down to Earth”: follow Lucia to the balcony and choose “Accept”. It is gone after Chapter 1. Do it early, even though it is not confirmed whether that one meditation is required.</span>
+  <button type="button" id="missableGo">See the guide</button>
+</div>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" class="tab active" data-view="guide" id="tabGuide">Guide &amp; tracker</button>
+  <button type="button" class="tab" data-view="roadmap" id="tabRoadmap">Roadmap to the platinum</button>
+  <button type="button" class="tab" data-view="checklist" id="tabChecklist">100% checklist <span class="tab-note" id="checklistTabNote"></span></button>
+</nav>
+
+<main>
+  <section id="viewGuide" class="view">
+    <div class="controls" role="search">
+      <label class="search">Search
+        <input id="search" type="search" placeholder="Name, mission or guide text…" autocomplete="off">
+      </label>
+      <label>Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Kind
+        <select id="kindFilter">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="side">Side characters</option>
+          <option value="activity">Activities</option>
+          <option value="collectible">Collectibles</option>
+          <option value="crime">Crime</option>
+          <option value="exploration">Exploration</option>
+          <option value="easter-egg">Easter eggs &amp; one-offs</option>
+          <option value="platinum">Platinum path</option>
+        </select>
+      </label>
+      <label>Visibility
+        <select id="hiddenFilter">
+          <option value="all">Visible &amp; hidden</option>
+          <option value="visible">Visible only</option>
+          <option value="hidden">Hidden only</option>
+        </select>
+      </label>
+      <label>Status
+        <select id="statusFilter">
+          <option value="all">Earned &amp; to do</option>
+          <option value="todo">To do</option>
+          <option value="earned">Earned</option>
+          <option value="missable">Missable</option>
+          <option value="unconfirmed">Unconfirmed method</option>
+        </select>
+      </label>
+      <label class="spoiler-toggle">Spoilers
+        <span class="switch"><input id="spoilerToggle" type="checkbox" checked> <span class="slider"></span></span>
+        <span class="spoiler-label" id="spoilerLabel">Hidden trophies stay hidden until earned</span>
+      </label>
+    </div>
+    <p class="result-count" id="resultCount"></p>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section id="viewRoadmap" class="view" hidden>
+    <h2>The road to <span class="plat">Vice Got a Price!</span></h2>
+    <p class="lede">One playthrough is enough — there is no mission replay and no New Game+, so play the story once and clean up in free-roam after the credits. Expect <b>about 200–250 hours</b> in all (PowerPyx says ~200, Push Square 250+). No difficulty settings exist, there are no online trophies, and the 61 cheats disable trophies and saving — keep trophy runs cheat-free.</p>
+    <ol class="roadmap">
+      <li>
+        <h3>Step 1 — Play the 5 chapters <span class="time">60–80 hours</span></h3>
+        <p>Do the optional missions as they appear, scan vehicles and study animals on the way, and keep a manual save at the start of each chapter (15 manual saves plus one autosave). The only thing to watch for: the Chapter 1 meditation for <b>Positive Mental Attitude</b> — see the warning above.</p>
+        <p class="roadmap-trophies">Earns: the 12 story trophies (4 chapter completions, 7 mission trophies, the final-mission Gold) as you go.</p>
+      </li>
+      <li>
+        <h3>Step 2 — After the credits, work the 100% checklist <span class="time">~100 hours</span></h3>
+        <p>The checklist appears under Progress &gt; Stats &gt; 100% Completion. Most of its 35 requirements ask for only part of a total, so it is closer to 60% true completion — but the no-slack items must be done in full: all robberies, 33 underwater discoveries, 42 shooting-range golds, 42 drone time trials and Bret's 15 Target Decks.</p>
+        <p class="roadmap-trophies">Earns: <b>A Long Road</b> (Gold) and most of the activity, crime and collectible trophies.</p>
+      </li>
+      <li>
+        <h3>Step 3 — Strangers, side quests and leftovers <span class="time">~10 hours</span></h3>
+        <p>Finish the 8 Strangers &amp; Freaks strands and the 6 side-character finales, then clean up whatever is left — the one-off trophies and any activity counts still short.</p>
+        <p class="roadmap-trophies">Earns: <b>Strangers &amp; Freaks</b>, the 6 side finales, the hidden one-offs — and then the Platinum.</p>
+      </li>
+    </ol>
+    <h3>Missable trophies</h3>
+    <p>Only one trophy can be missed: <b>Positive Mental Attitude</b> (Chapter 1 meditation at Jason's house, after “Down to Earth”). Everything else — story included — can still be earned in free-roam after the credits. For the 100% checklist only 15 of the 18 meditations are needed, so the missable one cannot block <b>A Long Road</b>.</p>
+    <h3>Chapter order</h3>
+    <ul class="chapters">
+      <li><b>Chapter 1</b> — Just Like Paradise, Paradise Lost <span class="muted">(plus the Chapter 1 meditation — do it now)</span></li>
+      <li><b>Chapter 2</b> — T**s Ass Drug Money, Trust (Breakfast Run) <span class="muted">(partner play unlocks at “Coffee Break”)</span></li>
+      <li><b>Chapter 3</b> — Vice City, Baby!, Break the Bank (The Cartel Heist)</li>
+      <li><b>Chapter 4</b> — Top Of The World, Ma; Family Matters, DWNFALL, Hi-Jacked <span class="muted">(bank vaults open here)</span></li>
+      <li><b>Chapter 5</b> — Snow Storm (Operation Savage Glory), then the final mission (Gold)</li>
+    </ul>
+    <p class="sources-line">Roadmap and timings: PowerPyx, “GTA 6 Trophy Guide &amp; Roadmap”. <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/" rel="noopener" target="_blank">powerpyx.com</a></p>
+  </section>
+
+  <section id="viewChecklist" class="view" hidden>
+    <h2>100% completion — <span class="plat">A Long Road</span></h2>
+    <p class="lede">The 35 requirements of the in-game checklist (Progress &gt; Stats &gt; 100% Completion), in its three groups. Tick each one off as you finish it; your ticks are saved in this browser. Items marked <b class="noslack-label">NO SLACK</b> must be completed in full — the rest only ask for part of the total.</p>
+    <div class="progress-line">
+      <strong id="checklistProgressText">0 of 35 done</strong>
+      <span id="checklistProgressPct">0%</span>
+    </div>
+    <div class="bar"><div class="bar-fill" id="checklistProgressBar" style="width:0%"></div></div>
+    <div id="checklistGroups"></div>
+    <p class="sources-line">Counts: PowerPyx, “GTA 6 100% Completion Checklist &amp; Guide”. <a href="https://www.powerpyx.com/gta-6-100-completion-checklist-guide/" rel="noopener" target="_blank">powerpyx.com</a> — same counts at GTA-Zone, GTABase and AlcastHQ.</p>
+  </section>
+</main>
+
+<div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="drawer-panel">
+    <button type="button" class="drawer-close" id="drawerClose" aria-label="Close">✕</button>
+    <div id="drawerBody"></div>
+  </div>
+</div>
+
+<footer>
+  <p><b>Leonida Trophy Guide</b> — an offline guide for Grand Theft Auto VI on PlayStation 5. Trophy names and descriptions are the official in-game text as PlayStation publishes them; every guide is written in our own words for this guide and names its source. Unconfirmed methods are flagged, never stated as fact.</p>
+  <p class="sources-line">Sources: PowerPyx, “GTA 6 Trophy Guide &amp; Roadmap” (<a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/" rel="noopener" target="_blank">powerpyx.com</a>) · PowerPyx, “GTA 6 100% Completion Checklist &amp; Guide” (<a href="https://www.powerpyx.com/gta-6-100-completion-checklist-guide/" rel="noopener" target="_blank">powerpyx.com</a>) · GTA-Zone, “GTA 6 Trophy List: All 55 Trophies” (<a href="https://gta-zone.com/news/gta-6-trophies-achievements/" rel="noopener" target="_blank">gta-zone.com</a>) · SixShore, “GTA 6 Trophy and Achievement List” (<a href="https://sixshore.com/gta-6/guides/trophies-and-achievements/" rel="noopener" target="_blank">sixshore.com</a>).</p>
+  <p class="fineprint">Not affiliated with Rockstar Games. No Rockstar logo, artwork or game screenshots are used. This guide works with the network off; the links above open only if you follow them. Difficulty 4/10, about 200–250 hours to the platinum.</p>
+  <div class="data-actions">
+    <button type="button" id="exportBtn">Export progress</button>
+    <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json"></label>
+    <button type="button" id="resetBtn" class="danger">Reset all progress</button>
+  </div>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
